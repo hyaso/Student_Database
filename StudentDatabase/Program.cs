@@ -19,6 +19,7 @@ while (askQuestion)
     int studentNo = student - 1;
     string answer;
 
+
     bool program = true;
     while (program)
     {
@@ -102,10 +103,10 @@ while (askQuestion)
             }
         }
 
-        else if (studentNo < 1 || studentNo > studentNames.Count())
+        else
         {
             Console.WriteLine("Please enter a valid number");
-            program = true;
+            program = false;
         }
     }
 
@@ -121,7 +122,7 @@ while (askQuestion)
         else
         {
             Console.WriteLine("Thank you for using the student database!");
-            Console.ReadKey();
+            askQuestion = false;
         }    
       
 
